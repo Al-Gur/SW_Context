@@ -2,14 +2,18 @@ import Navigation from "./Navigation.tsx";
 import {useContext} from "react";
 import {SWContext} from "../utils/context.ts";
 
-const Header = () => {
+interface Props3 {
+    heroH: HeroInfo
+}
 
-    const {hero} = useContext(SWContext);
+const Header = ({heroH}: Props3) => {
+
+    //const {hero} = useContext(SWContext);
 
     return (
         <header className="bg-grey-color rounded-t-2xl">
             <Navigation/>
-            <h1 className="text-center py-6 text-3xl">{hero.name}</h1>
+            <h1 className="text-center py-6 text-3xl">{heroH.name}</h1>
         </header>
     );
 };
