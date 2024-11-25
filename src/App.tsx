@@ -9,20 +9,17 @@ import {navItems} from "./utils/constants.ts";
 import {SWContext} from "./utils/context.ts";
 
 function App() {
-
-    const [hero, setHero] = useState<HeroInfo>({
-                                                   hero: {
-                                                   	name: '',
-                                                   	gender: '',
-                                                   	birth_year: '',
-                                                   	height: 0,
-                                                   	mass: 0,
-                                                   	hair_color: '',
-                                                   	skin_color: '',
-                                                   	eye_color: ''
-                                                   },
-                                                   setHero: (hero: HeroInfo) => {},
-                                               });
+const h:HeroInfo ={
+    	name: '',
+    	gender: '',
+    	birth_year: '',
+    	height: 0,
+    	mass: 0,
+    	hair_color: '',
+    	skin_color: '',
+    	eye_color: ''
+    };
+    const [hero, setHero] = useState<HeroInfo>(h);
 
     return (
         <>
@@ -34,5 +31,4 @@ function App() {
         </>
     )
 }
-
 export default App
